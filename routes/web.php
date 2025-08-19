@@ -9,6 +9,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\RestaurantController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,5 +61,7 @@ Auth::routes();
         Route::post('clients/delete/{id}',[ClientController::class,'deleteClient'])->name('clients.delete');
 
         Route::post('changeClientStatus',[ClientController::class,'changeClientStatus'])->name('changeClientStatus');
+
+        Route::get('orders',[OrderController::class,'index'])->name('orders.index');
     });
 
