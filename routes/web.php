@@ -10,6 +10,9 @@ use App\Http\Controllers\SettingController;
 use App\Http\Controllers\RestaurantController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +31,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-    Route::group(['middleware' => 'auth'], function () {
+    Route::get('logout',[LoginController::class,'logout'])->name('logout');
+
+    Route::group(['middleware' => 'auth','checkPermission'], function () {
 
         Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -63,5 +68,9 @@ Auth::routes();
         Route::post('changeClientStatus',[ClientController::class,'changeClientStatus'])->name('changeClientStatus');
 
         Route::get('orders',[OrderController::class,'index'])->name('orders.index');
+
+        Route::resource('users',UserController::class);
+
+        Route::resource('roles',RoleController::class);
     });
 

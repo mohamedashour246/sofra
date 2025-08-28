@@ -187,6 +187,11 @@ class OrderController extends Controller
         }
     }
 
+    public function declineOrder()
+    {
+        
+    }
+
     public function addReview(Request $request)
     {
         $validator = Validator::make($request->all(),[
