@@ -38,13 +38,14 @@ class MainController extends Controller
         $price = $request->user()->orders()->sum('price');
      //   $total = $request->user()->orders()->sum('total');
         $commission = $request->user()->orders()->sum('commission');
-        $payments = $request->user()->payments()->sum('price');
+        $payments = $request->user()->payments()->sum('cost');
 
-        $remainder = $payments - $commission;
+        $remainder = $commission - $payments;
 
         $data = [
             'price' => $price,
             'commission' => $commission,
+            'payments' => $payments,
             'remainder' => $remainder
         ];
 

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('restaurant_id');
             $table->foreign('restaurant_id')->references('id')->on('restaurants')->onDelete('cascade');
 
-            $table->decimal('price',10,8);
+            $table->decimal('cost',15,8);
             $table->text('note')->nullable();
             $table->date('date_pay')->nullable();
             $table->timestamps();

@@ -13,6 +13,8 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\PaymentController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -66,6 +68,8 @@ Auth::routes();
         Route::post('clients/delete/{id}',[ClientController::class,'deleteClient'])->name('clients.delete');
 
         Route::post('changeClientStatus',[ClientController::class,'changeClientStatus'])->name('changeClientStatus');
+
+        Route::resource('payments',PaymentController::class);
 
         Route::get('orders',[OrderController::class,'index'])->name('orders.index');
 

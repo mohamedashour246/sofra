@@ -11,10 +11,10 @@ class Payment extends Model
 
     protected $table = 'payments';
 
-    protected $fillable = ['restaurant_id','price'];
+    protected $fillable = ['restaurant_id','cost','note','date_pay'];
 
     public function restaurant()
     {
-        return $this->belongsTo('App\Models\Restaurant');
+        return $this->belongsTo('App\Models\Restaurant','restaurant_id');
     }
 }
