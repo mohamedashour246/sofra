@@ -33,6 +33,7 @@ class CategoryController extends Controller
         {
             return redirect()->back()->withErrors($validator)->withInput();
         }
+      //  $this->authorize('create',Category::class);
 
         Category::create($request->all());
 

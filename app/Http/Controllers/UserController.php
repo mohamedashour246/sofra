@@ -52,6 +52,7 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
         $roles = Role::all()->pluck('name','id')->toArray();
+       // dd($user->roles()->name);
         return view('users.edit',compact('user','roles'));
     }
 
@@ -73,6 +74,7 @@ class UserController extends Controller
         $user->password = bcrypt($request->password);
 
         $user->update($request->all());
+        $user->roles()->sync($request->roles_list);
 
         return redirect()->route('users.index')->with('success','User updated successfully');
     }

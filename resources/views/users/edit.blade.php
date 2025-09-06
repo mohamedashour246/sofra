@@ -52,9 +52,17 @@
             <label for="roles_list"> roles_list </label>
             {!! Form::select('roles_list[]',$roles,null,[
                 'class' => 'form-control',
-                'multiple' => 'multiple'
              ]) !!}
+
         </div>
+{{--        <select class="form-control" name="roles_list">--}}
+{{--            <option value="{{$user->roles->id}}"> {{$user->roles->name}} </option>--}}
+{{--            @foreach($roles as $role)--}}
+{{--                @if($user->roles->id != $role->id)--}}
+{{--                    <option value="{{$role->id}}"> {{$role->name}} </option>--}}
+{{--                @endif--}}
+{{--            @endforeach--}}
+{{--        </select> <br> <br>--}}
 
 
         <div class="form-group">

@@ -70,8 +70,6 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Api'],function () {
 
            Route::post('acceptOrder',[OrderController::class,'acceptOrder']);
 
-           Route::post('pendingOrder',[OrderController::class,'pendingOrder']);
-
            Route::post('rejectOrder',[OrderController::class,'rejectOrder']);
 
            Route::post('deliverOrder',[OrderController::class,'deliverOrder']);
@@ -83,6 +81,8 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Api'],function () {
        Route::group(['middleware' => 'auth:api'],function () {
 
            Route::post('addOrder',[OrderController::class,'addOrder']);
+
+           Route::post('acceptClientOrder',[OrderController::class,'acceptOrder']);
        });
 
 });

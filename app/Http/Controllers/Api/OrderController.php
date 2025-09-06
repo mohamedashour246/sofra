@@ -187,9 +187,36 @@ class OrderController extends Controller
         }
     }
 
-    public function declineOrder()
+    public function declineOrder(Request $request)
     {
+        $validator = Validator::make($request->all(),[
+            'order_id' => 'required'
+        ]);
 
+        if($validator->fails())
+        {
+            return responseJson(false,$validator->errors()->first(),$validator->errors());
+        }
+
+        $order = Order::findOrFail($request->order_id);
+
+        if(!$order)
+        {
+            return responseJson(false,'order not found',null);
+        }
+
+        if($order->order_state == 'accepted')
+        {
+            $order->update([
+                'order_state' => 'decline'
+            ]);
+
+            return responseJson(true,'success',$order);
+        }
+
+        else {
+            return responseJson(false,'order not available',null);
+        }
     }
 
     public function addReview(Request $request)
