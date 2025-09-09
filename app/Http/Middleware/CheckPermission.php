@@ -17,11 +17,11 @@ class CheckPermission
     public function handle(Request $request, Closure $next)
     {
         $routeName = $request->route()->getName();
-        $permission = Permission::whereRaw("FIND_IN_SET ('$routeName',routes)")->get();
+        $permission = Permission::whereRaw("FIND_IN_SET ('$routeName',routes)")->first();
 
         if($permission)
         {
-            if(!$request->user()->can($permission->name));
+           if(!$request->user()->can($permission->name))
             {
                 abort(403);
             }

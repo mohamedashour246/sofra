@@ -68,9 +68,9 @@ class RoleController extends Controller
         $role->update($request->all());
         $role->permissions()->sync($request->permission_list);
 
+       // dd($role->permissions()->guard_name);
         return redirect()->route('roles.index')->with('success','Role Updated successfully');
     }
-
 
     public function destroy($id)
     {

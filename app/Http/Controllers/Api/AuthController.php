@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Mail\userMailable;
 use App\Models\Client;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
@@ -230,6 +233,13 @@ class AuthController extends Controller
         else {
             return responseJson(false,'حدث خطأ ما',null);
         }
+    }
+
+    public function sendEmail()
+    {
+        Mail::to(Auth::user()->email)->send(new userMailable());
+
+        return responseJson(true,'email sent',null);
     }
 
 

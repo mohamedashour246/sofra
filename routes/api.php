@@ -80,6 +80,8 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Api'],function () {
 
        Route::group(['middleware' => 'auth:api'],function () {
 
+           Route::post('send-email',[AuthController::class,'sendEmail']);
+
            Route::post('addOrder',[OrderController::class,'addOrder']);
 
            Route::post('acceptClientOrder',[OrderController::class,'acceptOrder']);
