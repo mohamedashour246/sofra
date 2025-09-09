@@ -1,0 +1,1302 @@
+{
+	"info": {
+		"_postman_id": "26ab06bb-da9d-4409-ae63-aa71528f1e7a",
+		"name": "sofra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5943523"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "registerClient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Ali",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ali@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "555555",
+									"type": "text"
+								},
+								{
+									"key": "confirmation_password",
+									"value": "555555",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01220315620",
+									"type": "text"
+								},
+								{
+									"key": "district_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/registerClient",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"registerClient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginClient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ali@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "555555",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/loginClient",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"loginClient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerRestaurant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "cook door",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "cook2@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "222222",
+									"type": "text"
+								},
+								{
+									"key": "confirmation_password",
+									"value": "222222",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01020564964",
+									"type": "text"
+								},
+								{
+									"key": "district_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "cat_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "minimum_order",
+									"value": "720",
+									"type": "text"
+								},
+								{
+									"key": "delivery_fees",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "phone_contact",
+									"value": "01020564104",
+									"type": "text"
+								},
+								{
+									"key": "phone_whatsapp",
+									"value": "01020567600",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/Year 4/Internet Of Things/Lectures/IOTrevision/Revision/Revision 1/17.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/registerRestaurant",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"registerRestaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginRestaurant",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "cook2@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "222222",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/loginRestaurant",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"loginRestaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetRestaurantPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/resetRestaurantPassword?phone=01020564964",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"resetRestaurantPassword"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "01020564964"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateRestaurantPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/updateRestaurantPassword?pin_code=4137&password=444444",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"updateRestaurantPassword"
+							],
+							"query": [
+								{
+									"key": "pin_code",
+									"value": "4137"
+								},
+								{
+									"key": "password",
+									"value": "444444"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetClientPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "01220315620",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/resetClientPassword",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"resetClientPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateClientPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "01220315620",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/updateClientPassword?pin_code=9153&password=111111",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"updateClientPassword"
+							],
+							"query": [
+								{
+									"key": "pin_code",
+									"value": "9153"
+								},
+								{
+									"key": "password",
+									"value": "111111"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "client",
+			"item": [
+				{
+					"name": "order",
+					"item": [
+						{
+							"name": "addOrder",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "7|ZHrdXitc6dw4IWv4iLXhHfyGbHO3IDZGDDuAv8aW6049b2ba",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "restaurant_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "items[0][item_id]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "items[0][quantity]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "items[0][price]",
+											"value": "1000",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "mansoura",
+											"type": "text"
+										},
+										{
+											"key": "number",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "note",
+											"value": "egfcbvhdbiahdjf",
+											"type": "text"
+										},
+										{
+											"key": "payment_type",
+											"value": "cach",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/addOrder",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"addOrder"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "declineOrder",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "39|2ojbUBD096Xpny3E1it1ApIXRy8LthnX01TAwfmqa3fb788b",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "order_id",
+											"value": "6",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/declineOrder",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"declineOrder"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "restaurant",
+			"item": [
+				{
+					"name": "order",
+					"item": [
+						{
+							"name": "acceptOrder",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "6|xVdqVkIUQH3t5nWQloMtYHKiMVX9VGs3NpdMGGFye8bf7cd0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "order_id",
+											"value": "5",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/acceptOrder",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"acceptOrder"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "rejectOrder",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "6|xVdqVkIUQH3t5nWQloMtYHKiMVX9VGs3NpdMGGFye8bf7cd0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "order_id",
+											"value": "6",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/rejectOrder",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"rejectOrder"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deliverOrder",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "40|OOxEQWWeRdeCaW8sOV5mg41cFEGPUMwit7usZSKr5c042ddb",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "order_id",
+											"value": "26",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/deliverOrder",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"deliverOrder"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "orders",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "14|0IMB6GEjY74kAXxteUvqlsXh3TC7FHHq24jdCGPy56e47d17",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/orders",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "offer",
+					"item": [
+						{
+							"name": "addOffer",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "3|XRj0AOF2D6paNVWriKLKaUSuLiZocozhzLBTPfTCb6adff44",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "offer1",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/E:/Year 4/Internet Of Things/Lectures/IOTrevision/Revision/Revision 1/15.jpg"
+										},
+										{
+											"key": "description",
+											"value": "hyhdxjurmgbdb",
+											"type": "text"
+										},
+										{
+											"key": "available_from",
+											"value": "27-10-2014",
+											"type": "text"
+										},
+										{
+											"key": "available_to",
+											"value": "20-11-2014",
+											"type": "text"
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/addOffer",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"addOffer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateOffer",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "3|Exs7yVmViRUXCf3Ztnnagz0uUqSfJnJ1vRxdCw0V5492810b",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "offer5",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/E:/Year 4/Internet Of Things/Lectures/IOTrevision/Revision/Revision 1/17.jpg"
+										},
+										{
+											"key": "description",
+											"value": "vbjfir,dsnfr",
+											"type": "text"
+										},
+										{
+											"key": "available_from",
+											"value": "5-8-2008",
+											"type": "text"
+										},
+										{
+											"key": "available_to",
+											"value": "14-2-2009",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/updateOffer/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"updateOffer",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteOffer",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|isekn4QWJN3pCnT6bVmiwY9qHAyy2OtUt5FbPI9z796c9563",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/deleteOffer/7",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"deleteOffer",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "offers",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "11|4f9t8PMzTFUJ9h1nR3uD72jj8M7kmgpBnn50uoGS55fab447",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/offers",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"offers"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "product",
+					"item": [
+						{
+							"name": "addProduct",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "4|CB7DwTQi5XNbWuqqZco9J66Yo2wRJmXD7X21KFqh355aaa23",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "p2",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/E:/Year 4/Internet Of Things/Lectures/IOTrevision/Revision/Revision 1/9.jpg"
+										},
+										{
+											"key": "description",
+											"value": "fbxigt4yuwbkj5",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "1500",
+											"type": "text"
+										},
+										{
+											"key": "price_offer",
+											"value": "200",
+											"type": "text"
+										},
+										{
+											"key": "order_time",
+											"value": "30",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/addProduct",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"addProduct"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateProduct",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "2|VVIEi2uoMyaJC82Jxldwz7i6ANXHTlVpqjwWqnnBe55a8a6b",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "p3",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/E:/Year 4/Internet Of Things/Lectures/IOTrevision/Revision/Revision 1/7.jpg"
+										},
+										{
+											"key": "description",
+											"value": "berhujrdfcjrod",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "620",
+											"type": "text"
+										},
+										{
+											"key": "price_offer",
+											"value": "70",
+											"type": "text"
+										},
+										{
+											"key": "order_time",
+											"value": "25",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/updateProduct/3",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"updateProduct",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteProduct",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "32|RmyCRwokd5YEt6oIdEI5DLDA2nKncUqhI2vPlFEs895431b4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/deleteProduct/3",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"deleteProduct",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "products",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "8|rH5JM34zmF3bQKYnFRvYcijNb4IqZb3RQTY4e1RQf610dab6",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/v1/products",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"products"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "review",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6|xVdqVkIUQH3t5nWQloMtYHKiMVX9VGs3NpdMGGFye8bf7cd0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "comment",
+							"value": "ncdkszrttftad",
+							"type": "text"
+						},
+						{
+							"key": "rate",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/review",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "commissions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "8|W99iUhjSZvjM4lVqLTwr6ovZVWBRwU8V8vNunTrs7b9bccc5",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/commissions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"commissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "settings",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "25|rJZzqt7S8zOOcDXavKWqb249mkD7gLmQY2nRO3OE5836e989",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/settings/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"settings",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "33|18oFFvjnG2gms06XZkh0qO2h7IZozo8P3ftCRw2X4fc32aa8",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
